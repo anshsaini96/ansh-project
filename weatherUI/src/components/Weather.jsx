@@ -42,11 +42,11 @@ const Weather = () => {
        const response = await fetch(url);
        const data = await response.json();
        console.log(data);
-       const icon = allIcons[data.weather[0].icon] || clear_icon;
+       const icon = allIcons[data.Weather[0].icon] || clear_icon;
        setWeatherData({
         humidity: data.main.humidity,
         windSpeed: data.wind.speed,
-        temperature: Math.floor(data.main.temp),
+        temperature: Math.floor(data.main.temperature),
         city: data.name,
         icon: icon 
        })
